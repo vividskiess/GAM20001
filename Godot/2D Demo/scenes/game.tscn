@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://xmtbjj4kgnqq"]
+[gd_scene load_steps=19 format=4 uid="uid://xmtbjj4kgnqq"]
 
 [ext_resource type="Script" uid="uid://d0mpaapw3cy4f" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://bow0sxihpfdn4" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://blh73u0gqcegj" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://cynmvkq5ryxiw" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cpx0bjsmm88hj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://dyhuk28yq652j" path="res://scenes/audiostream.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")
@@ -490,3 +491,5 @@ theme_override_font_sizes/font_size = 8
 text = "Falling hurts"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MP3StreamPlayer" parent="." instance=ExtResource("10_vtaks")]

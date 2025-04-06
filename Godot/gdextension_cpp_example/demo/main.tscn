@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2lkbme177u2w"]
+
+[ext_resource type="Script" uid="uid://dsq3ttene7ff2" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://ckc2x5cjippoq" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_0xm2m")
+
+[node name="2DSprite" type="GDExample" parent="."]
+texture = ExtResource("1_ig7tw")
+centered = false
+
+[connection signal="position_changed" from="2DSprite" to="." method="_on_Sprite2D_position_changed"]
