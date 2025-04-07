@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://lq7e6gfuaegc"]
+
+[ext_resource type="Script" uid="uid://bi3ar7eskdvqt" path="res://StreamPlayer.gd" id="1"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1")
