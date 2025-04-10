@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0if2bpjvelsf"
+path="res://.godot/imported/Porter Robinson - Look at the Sky (Official Music Video).ogg-2ab2cf61b998c294034f8801c52c8795.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Porter Robinson - Look at the Sky (Official Music Video).ogg"
+dest_files=["res://.godot/imported/Porter Robinson - Look at the Sky (Official Music Video).ogg-2ab2cf61b998c294034f8801c52c8795.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

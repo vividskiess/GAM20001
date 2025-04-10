@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfyeamw4sg2af"]
+
+[ext_resource type="Script" uid="uid://cl8xm0e7efs55" path="res://show_spectrum.gd" id="1_sbnam"]
+[ext_resource type="AudioStream" uid="uid://dl3ppges2sw77" path="res://assets/maldita.ogg" id="2_yhjbh"]
+
+[node name="ShowSpectrum" type="Node2D"]
+script = ExtResource("1_sbnam")
+min_values = null
+
+[node name="Player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yhjbh")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 144)
+offset = Vector2(440, 100)
