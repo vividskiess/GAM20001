@@ -6,7 +6,8 @@ var ytdlp = extensionDir + "/yt-dlp/yt-dlp.exe"
 
 var ffplay_app: int = -1
 var ffplay_args: Array = []
-var youtube_url := "https://www.youtube.com/watch?v=aqpCYTF0YWs"
+# var stream_url := "https://www.youtube.com/watch?v=aqpCYTF0YWs"
+var audio_stream := "https://fr3.1mix.co.uk:8060/128"
 
 func _ready() -> void:
 	
@@ -19,20 +20,21 @@ func _ready() -> void:
 
 	
 	var output: Array = []
-	var result: int = OS.execute(ytdlp, ["-g", "-f", "bestaudio", "--audio-quality", "0", youtube_url], output)
+	# var result: int = OS.execute(ytdlp, ["-g", "-f", "bestaudio", "--audio-quality", "0", stream_url], output)
+	# var result: int = OS.execute(ffplay, ["-g", "-f", "bestaudio", "--audio-quality", "0", stream_url], output)
 
-	if result != 0 or output.size() == 0:
-		push_error("Could not get output from youtube link.")
-		return
+	# if result != 0 or output.size() == 0:
+	# 	push_error("Could not get output from youtube link.")
+	# 	return
 
-	var audio_stream: String = output[0].strip_edges()
-	print("Audio stream: ", audio_stream)
+	# var audio_stream: String = output[0].strip_edges()
+	# print("Audio stream: ", audio_stream)
 	
-	if audio_stream == "":
-		push_error("Audio stream is empty.")
-		return
+	# if audio_stream == "":
+	# 	push_error("Audio stream is empty.")
+	# 	return
 
-	ffplay_app = OS.create_process(ffplay, [audio_stream, "-nodisp", "-autoexit", "-volume", "2"])
+	ffplay_app = OS.create_process(ffplay, [audio_stream, "-nodisp", "-autoexit", "-volume", "10"])
 
 	if ffplay_app > 0:
 		print("ffplay started")
